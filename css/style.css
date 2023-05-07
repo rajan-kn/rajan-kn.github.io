@@ -86,8 +86,8 @@ body {
   width: 18%;
   min-width: 150px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#51b5ef), to(#436bf1));
-  background: linear-gradient(to right, #51b5ef, #436bf1);
+  background: -webkit-gradient(linear, left top, right top, from(#51b5ef), to(#fbccba));
+  background: linear-gradient(to right, #51b5ef, #fbccba);
 }
 
 .sub_page .hero_area {
@@ -105,6 +105,24 @@ body {
 
 .header_section .nav_container {
   margin: 0 auto;
+}
+
+.header_section.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fc5d35;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(156, 156, 156, 0.25);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(156, 156, 156, 0.25);
+    box-shadow: 0px 0px 40px 0px rgba(156, 156, 156, 0.25);
+    z-index: 999;
+    padding: 10px 0;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link img {
@@ -137,7 +155,7 @@ body {
   display: block;
   width: 40px;
   height: 4px;
-  background-color: #262626;
+  background-color: #fae5c8;
   margin: 7px 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -165,17 +183,18 @@ body {
 }
 
 .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: black;
-  background-color: rgba(62, 103, 205, 0.9);
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: none 0.5s;
+    /*transform: translate(0, -100%);*/
 }
 
 .overlay .closebtn {
@@ -194,6 +213,12 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .overlay-content {
@@ -625,7 +650,7 @@ a:focus {
 }
 
 .hot_section .box .detail-box {
-  margin-top: 35px;
+  margin-top: 75px;
 }
 
 .hot_section .box .detail-box p {
